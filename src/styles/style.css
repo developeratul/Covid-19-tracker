@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 100;
+}
+
+::-moz-selection {
+  background: #00ffe198;
+}
+
+::selection {
+  background: #00ffe198;
+}
+
+.container {
+  width: 950px;
+  margin: auto;
+}
+
+header h1 {
+  font-family: "Raleway", sans-serif;
+}
+
+header .header_img {
+  width: 150px;
+  margin: 10px auto;
+}
+
+header .header_img img {
+  width: 100%;
+}
+
+.card_container {
+  padding: 50px 0px;
+}
+
+.card_container .card_content_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card_container .card_content_wrapper .single_card {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  -webkit-box-shadow: 1px 2px 5px #ddd;
+          box-shadow: 1px 2px 5px #ddd;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.card_container .card_content_wrapper .single_card h2 {
+  padding: 6px 0px;
+}
+
+.card_container .card_content_wrapper .single_card p {
+  padding: 2px 0px;
+  font-family: "Raleway", sans-serif;
+}
+
+.card_container .card_content_wrapper .single_card p:last-child {
+  padding-top: 10px;
+}
+
+.card_container .card_content_wrapper .single_card p:last-child a {
+  text-decoration: none;
+  color: #0080ff;
+}
+
+.card_container .card_content_wrapper .single_card .last_update_p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.card_container .card_content_wrapper .infected {
+  border-bottom: 3px solid #00d9ff;
+}
+
+.card_container .card_content_wrapper .infected h2 {
+  color: #00d9ff;
+}
+
+.card_container .card_content_wrapper .death {
+  border-bottom: 3px solid red;
+}
+
+.card_container .card_content_wrapper .death h2 {
+  color: red;
+}
+
+.card_container .card_content_wrapper .recovered {
+  border-bottom: 3px solid #00ff15;
+}
+
+.card_container .card_content_wrapper .recovered h2 {
+  color: #00ff15;
+}
+
+.linechart_container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.country_picker {
+  padding: 20px 0px;
+}
+
+.country_picker .select_field {
+  width: 500px;
+  margin: auto;
+}
+
+.country_picker .select_field select {
+  width: 100%;
+  padding: 7px 10px;
+  font-size: 1.1rem;
+  outline: none;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  color: #525252;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 750px;
+  }
+  .linechart_container {
+    width: 85%;
+    margin: 20px auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  * {
+    cursor: default !important;
+  }
+  .container {
+    width: 90%;
+  }
+  .linechart_container {
+    width: 98%;
+    margin: 20px auto;
+  }
+  .country_picker .select_field {
+    width: 90%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

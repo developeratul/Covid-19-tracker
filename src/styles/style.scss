@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 100;
+}
+
+::selection {
+  background: #00ffe198;
+}
+
+.container {
+  width: 950px;
+  margin: auto;
+}
+
+// * the header compoent
+header {
+  h1 {
+    font-family: "Raleway", sans-serif;
+  }
+  .header_img {
+    width: 150px;
+    margin: 10px auto;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+// * the card component
+.card_container {
+  padding: 50px 0px;
+  .card_content_wrapper {
+    @include flexCenter();
+    .single_card {
+      width: 200px;
+      margin: 10px;
+      padding: 10px;
+      box-shadow: 1px 2px 5px #ddd;
+      text-align: center;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      h2 {
+        padding: 6px 0px;
+      }
+      p {
+        padding: 2px 0px;
+        font-family: "Raleway", sans-serif;
+        &:last-child {
+          padding-top: 10px;
+          a {
+            text-decoration: none;
+            color: rgb(0, 128, 255);
+          }
+        }
+      }
+      .last_update_p {
+        font-family: "Open Sans", sans-serif;
+      }
+    }
+    .infected {
+      border-bottom: 3px solid rgb(0, 217, 255);
+      h2 {
+        color: rgb(0, 217, 255);
+      }
+    }
+    .death {
+      border-bottom: 3px solid rgb(255, 0, 0);
+      h2 {
+        color: rgb(255, 0, 0);
+      }
+    }
+    .recovered {
+      border-bottom: 3px solid rgb(0, 255, 21);
+      h2 {
+        color: rgb(0, 255, 21);
+      }
+    }
+  }
+}
+
+// * the line chart
+.linechart_container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+// * the country picker
+.country_picker {
+  padding: 20px 0px;
+  .select_field {
+    width: 500px;
+    margin: auto;
+    select {
+      width: 100%;
+      padding: 7px 10px;
+      font-size: 1.1rem;
+      outline: none;
+      border: 1px solid #ddd;
+      border-radius: 2px;
+      color: rgb(82, 82, 82);
+    }
+  }
+}
+
+// * for laptop and iPAD's
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 750px;
+  }
+
+  // * the line chart
+  .linechart_container {
+    width: 85%;
+    margin: 20px auto;
+  }
+}
+
+// * for mobile devices
+@media screen and (max-width: 768px) {
+  * {
+    cursor: default !important;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  // * the line chart
+  .linechart_container {
+    width: 98%;
+    margin: 20px auto;
+  }
+
+  // * the country picker
+  .country_picker {
+    .select_field {
+      width: 90%;
+    }
+  }
+}
