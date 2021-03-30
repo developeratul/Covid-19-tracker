@@ -24,7 +24,7 @@ const CountryPicker = ({ handleCountryChange }) => {
             }}
             name="countrySelect"
           >
-            <option value="Global">Global</option>
+            <option value="">Global</option>
             {/* // * fetching the countries */}
             {country
               ? country.map((data, index) => {
